@@ -1,0 +1,32 @@
+.core-2169 {
+  @apply h-full;
+  .content {
+    @apply h-full flex flex-col;
+    .tabs {
+      @apply mb-4;
+    }
+    .tables {
+      @apply flex flex-col w-full overflow-x-auto grow h-0 gap-y-8;
+      .table-wrapper {
+        @apply flex w-full overflow-x-auto h-full;
+        .table {
+          @apply w-0 grow overflow-auto h-full;
+          display: block;
+          //table-layout: fixed;
+          //th {
+          //  &:nth-child(2) {
+          //    @apply w-96 overflow-ellipsis break-words overflow-hidden;
+          //  }
+          //}
+          thead {
+            tr:nth-child(1) {
+              th {
+                @apply sticky top-0 z-10;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
